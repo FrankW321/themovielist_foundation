@@ -17,8 +17,7 @@ foundation watch
 npm install -g gulp bower
 ```
 
-
-https://nodejs.org/en/
-https://git-scm.com/
-https://www.python.org/
+* [Node.js](https://nodejs.org/en/)
+* [Git-bash](https://git-scm.com/)
+* [Python](https://www.python.org/)
 
