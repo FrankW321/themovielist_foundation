@@ -10,15 +10,15 @@ npm install
 foundation watch
 ```
 ## Built With
-* [Foundation-6]https://foundation.zurb.com/) - The web framework used
+* [Foundation-6](https://foundation.zurb.com/) - The web framework used
 
 ## Requirements
 ```
 npm install -g gulp bower
 ```
 
-```
+
 https://nodejs.org/en/
 https://git-scm.com/
 https://www.python.org/
-```
+
