@@ -12,7 +12,8 @@ foundation watch
 ## Built With
 * [Foundation-6](https://foundation.zurb.com/) - The web framework used
 
-## Requirements
+## Software requirements
+Install gulp and bower gloablly
 ```
 npm install -g gulp bower
 ```
