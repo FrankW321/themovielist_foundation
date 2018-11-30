@@ -84,6 +84,9 @@ $bellefair: 'Bellefair', serif;
                 text-align: center;
                 @include font-bold(900);
                 @include text-transform(uppercase);
+                @include breakpoint(small only) {
+                    font-size: rem-calc(56);
+                }
             }
         }
     }
@@ -150,6 +153,7 @@ $bellefair: 'Bellefair', serif;
 .about-us-homepage {
 
     text-align: center;
+    
     p {
         text-align: center;
         line-height: rem-calc(40);
@@ -646,6 +650,7 @@ table tr {
     @include breakpoint(small only) {
         margin-right: -50px;
         margin-left: -50px;
+        margin-top:-50px;
     }
 
 
