@@ -209,6 +209,7 @@ $bellefair: 'Bellefair', serif;
     margin-bottom: rem-calc(100);
     margin-top: rem-calc(40);
     width: 100%;
+
     span {
         color: $primary-color;
         font-size: rem-calc(38);
@@ -223,6 +224,8 @@ $bellefair: 'Bellefair', serif;
         background-repeat: no-repeat;
         @include horizontal-center();
         margin-top:rem-calc(-15);
+
+
     }
 }
 /** Internal Pages **/
@@ -303,7 +306,7 @@ $bellefair: 'Bellefair', serif;
 .page-register {
     background-image:url(../img/popcorn.jpg);
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: right top 250px;
     background-size: 60%;
     @include xy-grid();
     @include breakpoint(medium) {
@@ -496,6 +499,10 @@ h1 {
 left: 8.5px;
 top: 100px;
 
+@include breakpoint(small only){
+    left: 0px;
+}
+
 table tr > *{
     display: block;
 }
@@ -517,7 +524,7 @@ table tr {
   }
 
 #breakpoint_detailedview{
-    margin-top: 10px;
+    margin-top: 50px;
     @include breakpoint(medium only){
         display: contents;
     }
@@ -684,4 +691,197 @@ table tr {
         z-index:10;
     }
 
+}
+
+.close-button{
+    font-size: 3em;
+    @include breakpoint(small only) {
+    font-size: 5em;
+    }
+}
+
+.image-container{
+    width: 300px;
+    margin-right: 20px;
+}
+
+.notification-movie-icon{
+    width: 100%;
+    height: auto;
+    -webkit-clip-path: circle(50.0% at 50% 50%);
+    clip-path: circle(50.0% at 50% 50%);
+    border: 3px solid $secondary-color;
+    margin-right: 140px;
+}
+
+.notification-form-detailed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    @include xy-cell();
+    margin-left: 5px;
+    margin-right: 5px; 
+    border-bottom: 3px solid $primary-color;
+
+    @include breakpoint(medium only) {
+        
+        font-size: rem-calc(40);
+        display: inline-grid;
+        @include flex-align(center);
+    }
+    @include breakpoint(small only) {
+        display: inline-grid;
+        @include flex-align(center);
+    }
+
+    
+
+        h4{
+            @include breakpoint(small only) {
+            margin-top: 10px;
+            font-size:rem-calc(26);
+            }
+            @include breakpoint(medium only) {
+                margin-top: 10px;
+                }
+            padding-right: 65px;
+            
+        }
+        h2{
+            padding-right: 35px;
+}
+    input, select, option {
+        height: rem-calc(50);
+      font-size:rem-calc(16);
+    
+    }
+    select{
+        @include breakpoint(small only) {
+        font-size:rem-calc(18);
+        }
+    }
+}
+
+.display-guide{
+    display: inline-block; 
+    vertical-align: middle;
+    text-align: center;
+    font-size:rem-calc(18);
+    width: 100%;
+    margin-bottom: -5px;
+
+    @include breakpoint(medium only) {
+        display: none
+    }
+    @include breakpoint(small only) {
+        display: none
+    }
+
+    h4{
+    display: inline-block; 
+    vertical-align: middle;
+    padding-right: 80px;
+    border-bottom: 2px solid $primary-color;
+    @include text-transform(uppercase);
+    @include font-bold(700);
+    font-size: rem-calc(22);
+    }
+}
+
+.movie-rating-notf{
+    margin-right: 90px;
+    display: flex;
+
+    @include breakpoint(small only) {
+        h2{
+            font-size: rem-calc(40);
+            
+        }
+    }
+    img{
+        margin-left: -35px;
+        margin-top: rem-calc(8);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 40px;
+        height: 40px;
+    }
+}
+.data-container{
+    display: inline-block; 
+    vertical-align: middle;
+    text-align: center;
+
+    h4{
+        display: inline-block; 
+        vertical-align: middle;
+    }
+}
+
+.defaultnotftxt{
+    @include text-transform(uppercase);
+    @include font-bold(700);
+    font-size: rem-calc(22);
+}
+
+.notification-form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    @include xy-cell();
+    margin-left: 5px;
+    margin-right: 5px; 
+    border-bottom: 3px solid $primary-color;
+    
+    @include breakpoint(medium only) {
+        width: stretch;
+        font-size: rem-calc(40);
+        display: inline;
+        @include flex-align(center);
+        @include xy-grid();
+
+    }
+    @include breakpoint(small only) {
+        width: stretch;
+        display: inline;
+        @include xy-grid();
+        @include flex-align(center);
+    }
+
+    
+
+        h4{
+            @include breakpoint(small only) {
+            margin-top: 10px;
+            font-size:rem-calc(26);
+            }
+            @include breakpoint(medium only) {
+                margin-top: 10px;
+                }
+            padding-right: 65px;
+            
+        }
+        h2{
+            padding-right: 35px;
+}
+    select, option {
+        height: rem-calc(50);
+      font-size:rem-calc(18);
+    
+    }
+    select{
+        @include breakpoint(small only) {
+        font-size:rem-calc(18);
+        }
+    }
+    input{
+        font-size:rem-calc(16); 
+        @include breakpoint(small only) {
+        width: stretch;
+        }
+        @include breakpoint(medium only) {
+            width: stretch;
+            }
+    }
 }

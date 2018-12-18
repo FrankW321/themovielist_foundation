@@ -1,0 +1,141 @@
+---
+title: register
+slogan: Everything about your account
+---
+
+<div class="container">
+    <main class="main-content page-{{title}}">
+        <h2 class="heading-title">My<span>Account Details</span></h2>
+
+        <div class="reservation-form">
+            <form method="post" id="contact-form" action="assets/php/send.php" data-abide novalidate>
+                <div class="field-container">
+                    <label for="name">
+                        Your Name:
+                        <input type="text" id="name" placeholder="Full Name" name="name" required>
+                        <span class="form-error">
+                            Error, the name field is mandatory!
+                        </span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    <label for="email">
+                        Email:
+                        <input type="text" id="email" placeholder="Email" name="email" required pattern="email">
+                        <span class="form-error">
+                            Error, the Email field is mandatory!
+                        </span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    <input type="submit" value="Change settings" class="button send_btn">
+                </div>
+            </form>
+        </div>
+        <h2 class="heading-title">My<span>Notification filter</span></h2>
+        <h3 class="defaultnotftxt">Set default notifications</h3>
+
+        <div class="notification-form">
+            <select name="genre" multiple="" class="ui fluid dropdown">
+                <option value="default">All genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="war">War</option>
+                <option value="horror">Horror</option>
+            </select>
+            <select name="rating">
+                <option value="default">All ratings</option>
+                <option value="5">5+</option>
+                <option value="6">6+</option>
+                <option value="7">7+</option>
+                <option value="8">8+</option>
+                <option value="9">9+</option>
+            </select>
+
+            <input type="submit" value="Set notification filter" class="button send_btn">
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <h2 class="heading-title">My<span>Selected Notifications</span></h2>
+        <div class="display-guide">
+            <h4>Movie name</h4>
+            <h4>Genre</h4>
+            <h4>Rating</h4>
+            <h4>Set your cinema</h4>
+        </div>
+
+        <div class="notification-form-detailed">
+            <div class="image-container">
+                <img class="notification-movie-icon" src="../assets/img/menu1.jpg">
+            </div>
+
+            <h4>Possession of Hannah Grace</h4>
+            <h4>Comedy, Drama</h4>
+            <div class="movie-rating-notf">
+                <h2>7.2</h2>
+                <img src="../assets/img/imdb-icon.png">
+            </div>
+
+            <select name="rating">
+                <option value="default">Arrives in any cinema</option>
+                <option value="apollo">Arrives in Apollo</option>
+                <option value="cinnamon">Arrives in Cinnamon</option>
+                <option value="forumcinemas">Arrives in Forum Cinemas</option>
+            </select>
+            <input type="submit" value="Delete notification" class="button send_btn">
+        </div>
+
+        <div class="notification-form-detailed">
+            <div class="image-container">
+                <img class="notification-movie-icon" src="../assets/img/menu1.jpg">
+            </div>
+
+            <h4>Possession of Hannah Grace</h4>
+            <h4>Comedy, Drama</h4>
+            <div class="movie-rating-notf">
+                <h2>7.2</h2>
+                <img src="../assets/img/imdb-icon.png">
+            </div>
+
+            <select name="rating">
+                <option value="default">Arrives in any cinema</option>
+                <option value="apollo">Arrives in Apollo</option>
+                <option value="cinnamon">Arrives in Cinnamon</option>
+                <option value="forumcinemas">Arrives in Forum Cinemas</option>
+            </select>
+            <input type="submit" value="Delete notification" class="button send_btn">
+        </div>
+
+
+        <div class="notification-form-detailed">
+            <div class="image-container">
+                <img class="notification-movie-icon" src="../assets/img/menu1.jpg">
+            </div>
+
+            <h4>Possession of Hannah Grace</h4>
+            <h4>Comedy, Drama</h4>
+            <div class="movie-rating-notf">
+                <h2>7.2</h2>
+                <img src="../assets/img/imdb-icon.png">
+            </div>
+
+            <select name="rating">
+                <option value="default">Arrives in any cinema</option>
+                <option value="apollo">Arrives in Apollo</option>
+                <option value="cinnamon">Arrives in Cinnamon</option>
+                <option value="forumcinemas">Arrives in Forum Cinemas</option>
+            </select>
+            <input type="submit" value="Delete notification" class="button send_btn">
+        </div>
+    </main>
+</div>
