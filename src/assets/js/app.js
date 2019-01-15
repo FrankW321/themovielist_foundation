@@ -17,26 +17,6 @@ window.libs = libs;
 
 
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-
-
 $(document).foundation();
 
 $('#contact-form')
@@ -47,8 +27,29 @@ $('#contact-form')
     'error'
   )
 })
+.on("formvalid.zf.abide", function(ev,frm) {
+  swal(
+    'Good job!',
+    'You submitted',
+    'success'
+  );
+})
 
-// form validation passed, form will submit if submit event not returned false
+ 
+
+
+
+
+
+ /*  .on("valid.zf.abide", function(ev,elem) {
+      swal(
+     'Good job!',
+     'You submitted the form!',
+     'success'
+    );
+  }) */
+
+/* // form validation passed, form will submit if submit event not returned false
 .on("formvalid.zf.abide", function (ev, frm) {
   var form = $(this);
   $.ajax({
@@ -60,25 +61,25 @@ $('#contact-form')
       var response = JSON.parse(result);
       console.log(response);
       swal(
-        response.message,
-        'Thank you, ' + response.name + ' For your reservation',
+        'Good job!',
+        'You submitted the form!',
         'success'
-      );
+       );
     }
   })
-
-
-  // swal(
-  //   'Good job!',
-  //   'You submitted the form!',
-  //   'success'
-  // );
 })
+
+  swal(
+    'Good job!',
+    'You submitted the form!',
+    'success'
+  );
+
 // to prevent form from submitting upon successful validation
 .on("submit", function (ev) {
   ev.preventDefault();
   console.log("Submit for form id " + ev.target.id + " intercepted");
-});
+}); */
 
 
 

@@ -8,20 +8,20 @@ slogan: Become a member today
         <h2 class="heading-title">Make your account <span>here</span></h2>
 
         <div class="reservation-form">
-            <form method="post" id="contact-form" action="assets/php/send.php" data-abide novalidate>
+            <form method="get" id="contact-form" action="" data-abide novalidate>
                 <div class="field-container">
-                    <label for="name">
+                    <label for="email">
                         EMAIL:
-                        <input type="text" id="name" placeholder="example@example.com" name="name" required>
+                        <input type="text" id="email" placeholder="example@example.com" name="email" required pattern="email">
                         <span class="form-error">
                             Error, the Email field is mandatory!
                         </span>
                     </label>
                 </div>
                 <div class="field-container">
-                    <label for="email">
+                    <label for="name">
                         Password:
-                        <input type="text" id="email" placeholder="Your password" name="email" required pattern="email">
+                        <input type="text" id="name" placeholder="Your password" name="name" required>
                         <span class="form-error">
                             Error, the Password field is mandatory!
                         </span>

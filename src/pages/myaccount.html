@@ -8,22 +8,22 @@ slogan: Everything about your account
         <h2 class="heading-title">My<span>Account Details</span></h2>
 
         <div class="reservation-form">
-            <form method="post" id="contact-form" action="assets/php/send.php" data-abide novalidate>
+            <form method="get" id="contact-form" action="" data-abide novalidate>
                 <div class="field-container">
-                    <label for="name">
-                        Your Name:
-                        <input type="text" id="name" placeholder="Full Name" name="name" required>
+                    <label for="email">
+                        EMAIL:
+                        <input type="text" id="email" placeholder="example@example.com" name="email" required pattern="email">
                         <span class="form-error">
-                            Error, the name field is mandatory!
+                            Error, the Email field is mandatory!
                         </span>
                     </label>
                 </div>
                 <div class="field-container">
-                    <label for="email">
-                        Email:
-                        <input type="text" id="email" placeholder="Email" name="email" required pattern="email">
+                    <label for="name">
+                        Password:
+                        <input type="text" id="name" placeholder="Your password" name="name" required>
                         <span class="form-error">
-                            Error, the Email field is mandatory!
+                            Error, the Password field is mandatory!
                         </span>
                     </label>
                 </div>
@@ -60,7 +60,7 @@ slogan: Everything about your account
             <div class="notif_filter">
                 <div class="notif_filter_flex">
                     <label class="selectbutton">
-                        <input type="checkbox" name="email" value="email"> Email-notification<br>
+                        <input type="checkbox" name="email" value="email" checked> Email-notification<br>
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -74,6 +74,9 @@ slogan: Everything about your account
         </div>
         <div class="notification-form-button">
             <input type="submit" value="Set notification filter" class="button send_btn">
+            <span class="form-error">
+                Error, atleast 1 notification option must be ticked!
+            </span>
         </div>
         <!-- 3.3 My Selected Notifications Column -->
         <h2 class="heading-title">My<span>Selected Notifications</span></h2>
@@ -102,7 +105,13 @@ slogan: Everything about your account
                 <option value="cinnamon">Arrives in Cinnamon</option>
                 <option value="forumcinemas">Arrives in Forum Cinemas</option>
             </select>
-            <input type="submit" value="Delete notification" class="button send_btn">
+            <input type="submit" value="Delete notification" class="button send_btn" onclick="myFunction2()">
+            <script>
+                function myFunction2() {
+                    confirm("Are you sure?");
+                }
+
+            </script>
         </div>
 
         <div class="notification-form-detailed">
