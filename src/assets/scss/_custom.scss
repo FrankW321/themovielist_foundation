@@ -444,6 +444,51 @@ h1 {
     user-select: none;
 }
 
+.bottomborder{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $primary-color;
+}
+.notif_filter{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    @include xy-cell();
+    margin-left: 5px;
+    margin-right: 5px; 
+    width: 98.6%;
+        @include breakpoint(small only) {
+            display: inline-block;
+        }
+
+}
+
+.notif_filter_flex{
+    padding-right: 50px;
+    padding-left: 50px;
+        @include breakpoint(medium only) {
+        padding-right: 25px;
+        padding-left: 25px;
+        }
+        @include breakpoint(small only) {
+        padding-right: 0px;
+        padding-left: 0px;
+        }
+}
+
+.selectbutton_notf_filter{
+    display: table;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Hide the browser's default checkbox */
 .selectbutton input {
     position: absolute;
@@ -455,6 +500,16 @@ h1 {
 
 /* Create a custom checkbox */
 .checkmark {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $white;
+    border: rem-calc(2) solid $primary-color;
+}
+.checkmark_notf_filter {
+    margin-left: 10px;
     position: absolute;
     top: 8px;
     left: 0;
@@ -712,6 +767,14 @@ table tr {
     clip-path: circle(50.0% at 50% 50%);
     border: 3px solid $secondary-color;
     margin-right: 140px;
+    @include breakpoint(medium only) {
+        margin-left: 40px;
+        margin-right: 0px;
+    }
+    @include breakpoint(small only) {
+        margin-left: 15px;
+        margin-right: 0px;
+    }
 }
 
 .notification-form-detailed {
@@ -832,7 +895,6 @@ table tr {
     @include xy-cell();
     margin-left: 5px;
     margin-right: 5px; 
-    border-bottom: 3px solid $primary-color;
     
     @include breakpoint(medium only) {
         width: stretch;
@@ -848,6 +910,7 @@ table tr {
         @include xy-grid();
         @include flex-align(center);
     }
+
 
     
 
@@ -884,4 +947,57 @@ table tr {
             width: stretch;
             }
     }
+}
+
+.notification-form-button{
+padding-top: 10px;
+padding-bottom: 10px;
+display: grid;
+width: 110%;
+margin-left:5px;
+margin-right: 25px;
+border-bottom: rem-calc(3) solid $primary-color;
+    input{
+        font-size: rem-calc(18);
+    }
+        @include breakpoint(medium only) {
+            margin-right: 5px;
+            margin-left: 5px;
+            }
+            @include breakpoint(small only) {
+                margin-right: 5px;
+                margin-left: 5px;
+                }
+    
+}
+
+.calendar{
+    display: inline-block;
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  /* custom styles */
+  body {
+    padding: 4em;
+    background: #e5e5e5;
+    font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  }
+  label {
+    display: block;
+  }
+  input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+  }
 }
