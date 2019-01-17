@@ -17,23 +17,7 @@ window.libs = libs;
 
 
 
-$(document).foundation();
 
-$('#contact-form') //This works, but conflict with line 79
-.on("invalid.zf.abide", function (ev, elem) {
-  swal(
-    'Oops...',
-    'Something went wrong!',
-    'error'
-  )
-})
- .on("formvalid.zf.abide", function(ev, frm) {
-  swal(
-    'Good job!',
-    'You are registered!',
-    'success'
-  );
-}) 
 
 /*
  // form validation passed, form will submit if submit event not returned false
@@ -78,6 +62,25 @@ var options = {
 };
  var abide = new Foundation.Abide($('[data-abide]'), options); //This works, but conflict with line 22-36
  
+
+ $(document).foundation();
+
+$('#contact-form') //This works, but conflict with line 79
+.on("invalid.zf.abide", function (ev, elem) {
+  swal(
+    'Oops...',
+    'Something went wrong!',
+    'error'
+  )
+})
+ .on("formvalid.zf.abide", function(ev, frm) {
+  swal(
+    'Good job!',
+    'You are registered!',
+    'success'
+  );
+}) 
+
 
 libs.AOS.init();
 
