@@ -19,7 +19,7 @@ window.libs = libs;
 
 $(document).foundation();
 
-$('#contact-form')
+$('#contact-form') //This works, but conflict with line 79
 .on("invalid.zf.abide", function (ev, elem) {
   swal(
     'Oops...',
@@ -27,29 +27,16 @@ $('#contact-form')
     'error'
   )
 })
-.on("formvalid.zf.abide", function(ev,frm) {
+ .on("formvalid.zf.abide", function(ev, frm) {
   swal(
     'Good job!',
-    'You submitted',
+    'You are registered!',
     'success'
   );
-})
+}) 
 
- 
-
-
-
-
-
- /*  .on("valid.zf.abide", function(ev,elem) {
-      swal(
-     'Good job!',
-     'You submitted the form!',
-     'success'
-    );
-  }) */
-
-/* // form validation passed, form will submit if submit event not returned false
+/*
+ // form validation passed, form will submit if submit event not returned false
 .on("formvalid.zf.abide", function (ev, frm) {
   var form = $(this);
   $.ajax({
@@ -68,20 +55,29 @@ $('#contact-form')
     }
   })
 })
-
-  swal(
-    'Good job!',
-    'You submitted the form!',
-    'success'
-  );
-
-// to prevent form from submitting upon successful validation
-.on("submit", function (ev) {
-  ev.preventDefault();
-  console.log("Submit for form id " + ev.target.id + " intercepted");
-}); */
+*/
 
 
+var options = {
+  validators: {
+    checkbox_limit: function(el, required, parent) {
+      var group = parent.closest('.checkbox-group');
+      var min = group.attr('data-validator-min');
+      var checked = group.find(':checked').length;
+      if (checked >= min) {
+        group.find('small.error').hide();
+        return true;
+      } else {
+        group.find('small.error').css({
+          display: 'block'
+        });
+        return false;
+      }
+    }
+  }
+};
+ var abide = new Foundation.Abide($('[data-abide]'), options); //This works, but conflict with line 22-36
+ 
 
 libs.AOS.init();
 

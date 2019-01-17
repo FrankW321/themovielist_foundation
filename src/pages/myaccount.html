@@ -8,7 +8,7 @@ slogan: Everything about your account
         <h2 class="heading-title">My<span>Account Details</span></h2>
 
         <div class="reservation-form">
-            <form method="get" id="contact-form" action="" data-abide novalidate>
+            <form id="contact-form" action="" data-abide novalidate>
                 <div class="field-container">
                     <label for="email">
                         EMAIL:
@@ -57,26 +57,29 @@ slogan: Everything about your account
         </div>
         <!-- 3.2 Notifications Column -->
         <div class="container">
-            <div class="notif_filter">
-                <div class="notif_filter_flex">
-                    <label class="selectbutton">
-                        <input type="checkbox" name="email" value="email" checked> Email-notification<br>
-                        <span class="checkmark"></span>
-                    </label>
+            <form id="form" data-abide>
+                <div class="notif_filter checkbox-group" data-validator-min="1">
+                    <div class="notif_filter_flex">
+                        <label class="selectbutton">
+                            <input type="checkbox" name="email" value="email" checked data-validator="checkbox_limit">
+                            Email-notification<br>
+                            <span class="checkmark"></span>
+                        </label>
+                        <small class="error">You have to check at least one option.</small>
+                    </div>
+                    <div class="notif_filter_flex">
+                        <label class="selectbutton">
+                            <input type="checkbox" name="push" value="push" data-validator="checkbox_limit">
+                            Push-notification<br>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
-                <div class="notif_filter_flex">
-                    <label class="selectbutton">
-                        <input type="checkbox" name="sms" value="sms"> SMS-notification(-0.32€)<br>
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="notification-form-button">
-            <input type="submit" value="Set notification filter" class="button send_btn">
-            <span class="form-error">
-                Error, atleast 1 notification option must be ticked!
-            </span>
+
+            <input type="submit" value="Set notification filter" class="button send_btn" data-open="exampleModal5">
         </div>
         <!-- 3.3 My Selected Notifications Column -->
         <h2 class="heading-title">My<span>Selected Notifications</span></h2>
@@ -105,13 +108,7 @@ slogan: Everything about your account
                 <option value="cinnamon">Arrives in Cinnamon</option>
                 <option value="forumcinemas">Arrives in Forum Cinemas</option>
             </select>
-            <input type="submit" value="Delete notification" class="button send_btn" onclick="myFunction2()">
-            <script>
-                function myFunction2() {
-                    confirm("Are you sure?");
-                }
-
-            </script>
+            <input type="submit" value="Delete notification" class="button send_btn" data-open="exampleModal2">
         </div>
 
         <div class="notification-form-detailed">
@@ -132,7 +129,7 @@ slogan: Everything about your account
                 <option value="cinnamon">Arrives in Cinnamon</option>
                 <option value="forumcinemas">Arrives in Forum Cinemas</option>
             </select>
-            <input type="submit" value="Delete notification" class="button send_btn">
+            <input type="submit" value="Delete notification" class="button send_btn" data-open="exampleModal2">
         </div>
 
 
@@ -154,7 +151,49 @@ slogan: Everything about your account
                 <option value="cinnamon">Arrives in Cinnamon</option>
                 <option value="forumcinemas">Arrives in Forum Cinemas</option>
             </select>
-            <input type="submit" value="Delete notification" class="button send_btn">
+            <input type="submit" value="Delete notification" class="button send_btn" data-open="exampleModal2">
+        </div>
+        <div class="notification-form-button-2">
+            <input type="submit" value="Update notifications" class="button send_btn" data-open="exampleModal4">
         </div>
     </main>
+</div>
+
+
+
+<!-- This is delete notification modal -->
+<div class="reveal" id="exampleModal2" data-reveal>
+    <h2>Delete notification</h2>
+    <button class="button" data-open="exampleModal3">Confirm</button>
+    <button class="button" data-close aria-label="Close reveal">Cancel</button>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!-- This is delete notification nested modal -->
+<div class="reveal" id="exampleModal3" data-reveal>
+    <h2>This item is deleted!</h2>
+    <button class="button" data-close aria-label="Close reveal">OK</button>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!-- This is update notification modal -->
+<div class="reveal" id="exampleModal4" data-reveal>
+    <h2>Notifications are updated!</h2>
+    <button class="button" data-close aria-label="Close reveal">OK</button>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!-- This is set default notification filter modal -->
+<div class="reveal" id="exampleModal5" data-reveal>
+    <h2>Notification filter is set!</h2>
+    <button class="button" data-close aria-label="Close reveal">OK</button>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>

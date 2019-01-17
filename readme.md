@@ -1,5 +1,5 @@
 # The Movie List
-A web application which lets you know about current and upcoming movies with E-mail and push-notifications
+A web application which lets you know about current and upcoming movies with email and push-notifications
 
 ## Getting Started
 ```
